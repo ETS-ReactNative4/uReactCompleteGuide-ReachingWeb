@@ -11,4 +11,4 @@ const post = (props) => (
     </article>
 );
 
-export default post;
+export default post;  // react-router-dom 의 withRouter(post) 로 하면 Link 로 routing 될 때 자동으로 전달되는 this.props (링크 동작 관련 값들)을 자동으로 내려줄 수 있다.
