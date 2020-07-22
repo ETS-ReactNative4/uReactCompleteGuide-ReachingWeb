@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import './Blog.css';
 import Posts from './Posts/Posts'
 import NewPost from './NewPost/NewPost'
@@ -11,12 +11,14 @@ class Blog extends Component {
                 <header>
                     <nav>
                         <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to={{
+                            <li><NavLink to="/" exact  // activeClassName="active" 는 default와 동일. 임의의 css class로 설정가능
+                                activeClassName="active">Home</NavLink>
+                            </li>
+                            <li><NavLink to={{
                                 pathname: '/new-post',
                                 hash: '#submit',    // attached to path as hashtag. just an example. do nothing here
                                 search: '?quick-submit=true' // attached to path as query param. it's just an example. do nothing here
-                            }}>New Post</Link></li>
+                            }}>New Post</NavLink></li>
                         </ul>
                     </nav>
                 </header>
