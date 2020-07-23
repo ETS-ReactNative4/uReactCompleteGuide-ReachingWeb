@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Blog from './containers/Blog/Blog';
 
+// can use React.lazy(() => {}) from react v16.6.0
 class App extends Component {
   render() {
     return (
