@@ -13,7 +13,7 @@ class NewPost extends Component {
     }
 
     componentDidMount() {
-        
+        // If want to prevent unauthed from entering this page => this.props.history.replace('/posts')
     }
 
     postDataHandler = () => {
